@@ -1,3 +1,3 @@
-$(document).ready(function () {
-  $("input[type='text'], textarea").attr("spellcheck", false);
-});
+// $(document).ready(function () {
+//   $("input[type='text'], textarea").attr("spellcheck", false);
+// });

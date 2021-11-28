@@ -354,7 +354,7 @@
           <br />
           <textarea
             spellcheck="false"
-            id="messageContent"
+            id="messageContent toCount"
             name="messageContent"
             cols="40"
             rows="16"
@@ -362,18 +362,28 @@
           ></textarea>
         </div>
         <div>
-          <label class="writingLabel" for="messageContent">Part TWO:</label>
+          <p>The number of words is <span id="wordCount"></span></p>
+          <label class="writingLabel toCount" for="messageContent"
+            >Part TWO:</label
+          >
           <br />
           <textarea
             spellcheck="false"
-            id="messageContent"
+            id="messageContent toCount"
             name="messageContent"
             cols="40"
-            rows="26"
+            rows="40"
             align="left"
           ></textarea>
         </div>
       </fieldset>
     </form>
+    <script>
+      document.getElementById("toCount").addEventListener("input", function () {
+        var text = this.value,
+          count = text.trim().replace(/\s+/g, " ").split(" ").length;
+        document.getElementById("wordCount").textContent = count;
+      });
+    </script>
   </body>
 </html>
